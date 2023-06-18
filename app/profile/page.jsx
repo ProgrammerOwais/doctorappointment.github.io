@@ -16,7 +16,7 @@ const Profile = () => {
     };
     userInfo();
     console.log("function is executed");
-  }, []);
+  }, );
   const handleEdit = (user)=>{
     router.push(`/update?id=${user._id}`)
     
@@ -40,7 +40,7 @@ const Profile = () => {
   return (
     <div className="cards-div">
         {userData.map((user) => (
-           <div className="appointment-cards">
+           <div key={user._id} className="appointment-cards">
             
      <hr className="hr" />
             
